@@ -78,7 +78,7 @@ const validation = () => {
   const emailValidation = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/gm;
   const phoneValidation = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/gm;
   
-  const errors = {firstName,lastName,email,phone,subject,message} 
+  const errors = {} 
   
   if(!formValues.firstName) {
     errors.firstName = "First name is required"
