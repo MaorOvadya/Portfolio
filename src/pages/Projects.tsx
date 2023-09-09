@@ -10,7 +10,7 @@ function Projects() {
       <div className='flex flex-wrap justify-evenly relative gap-10'>
 
           {projects.map((pro) => 
-            <div key={pro.id} className='mx-5 border-black rounded-xl border w-[27rem] h-full' onMouseEnter={() => setHover(true)}  onMouseLeave={() => setHover(false)}>
+            <div key={pro.id} className='mx-5 border-black rounded-xl border w-[27rem] h-full'>
               <div className='flex flex-col bg-slate-300 capitalize rounded-xl text-black relative'>
                 <img className='rounded-t-xl' src={pro.projectImage}/>
                   <div className='pt-3 leading-6 text-left px-3 border-black border-b pb-3'>
