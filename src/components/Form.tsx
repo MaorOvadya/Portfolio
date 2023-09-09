@@ -24,10 +24,10 @@ const [formErrors,setFormErrors] = useState({})
 const [isSubmit,setIsSubmit] = useState(false)
 
 
-const handleChange = (e: { target: { name: any; value: any; }; }) => {
+const handleChange = (e: { target: { name: string; value:string }; }) => {
   const  {name,value}  = e.target
   setFormValues({...formValues, [name]:value})
-  setFormErrors(validation(formValues))
+  setFormErrors((formValues))
 }
 
 
@@ -35,32 +35,35 @@ const handleSubmit = (e: { preventDefault: () => void; }) => {
   e.preventDefault()
   setIsSubmit(true)
 
-  const emailValidation = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/gm;
+  // const emailValidation = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/gm;
 
-  if (!isSubmit && !validation(formValues)){
-      console.log('please fill all details')
-    }
+  // if (!isSubmit && !validation(formValues)){
+  //     console.log('please fill all details')
+  //   }
 
-    else if (isSubmit && validation(formValues)){
-      if (formValues.firstName && formValues.lastName && formValues.email.match(emailValidation) && formValues.subject && formValues.message ) {
-        sendEmail(e)
-        } else {
-          return null
-        }
-      }
+  //   else if (isSubmit && validation(formValues)){
+  //     if (formValues.firstName && formValues.lastName && formValues.email.match(emailValidation) && formValues.subject && formValues.message ) {
+  //       sendEmail(e)
+  //       } else {
+  //         return null
+  //       }
+  //     }
 }
 
 
 function sendEmail(e: { preventDefault?: () => void; target?: any; }) {
 
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   emailjs.sendForm('gmail', 'template_gmail', e.target, 'FkrJpZXFzcsGrkdeE')
   .then((result) => {
     alert('Messege sent successfully')
       console.log(result.text);
   }, (error) => {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       console.log(error.text);
   });
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
     e.target.reset(); 
 
     formValues.firstName = ""
@@ -73,65 +76,65 @@ function sendEmail(e: { preventDefault?: () => void; target?: any; }) {
 
 
 
-const validation = () => {
+// const validation = () => {
 
-  const emailValidation = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/gm;
-  const phoneValidation = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/gm;
+//   const emailValidation = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/gm;
+//   const phoneValidation = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/gm;
   
-  const errors = {} 
+//   const errors = {firstName,lastName,email,phone,subject,message} 
   
-  if(!formValues.firstName) {
-    errors.firstName = "First name is required"
-  } else if (formValues.firstName.length <= 1 ) {
-    errors.firstName = "First name not valid"
-  } else {
-    errors.firstName =''
-  }
+//   if(!formValues.firstName) {
+//     errors.firstName = "First name is required"
+//   } else if (formValues.firstName.length <= 1 ) {
+//     errors.firstName = "First name not valid"
+//   } else {
+//     errors.firstName =''
+//   }
   
-  if(!formValues.lastName) {
-    errors.lastName = "Last name is required"
-  } else if (formValues.lastName.length <= 1 ) {
-    errors.lastName = "First name not valid"
-  } else {
-    errors.lastName =''
-  }
+//   if(!formValues.lastName) {
+//     errors.lastName = "Last name is required"
+//   } else if (formValues.lastName.length <= 1 ) {
+//     errors.lastName = "First name not valid"
+//   } else {
+//     errors.lastName =''
+//   }
 
-  if(!formValues.email) {
-    errors.email = "email is required"
-  } else if (!formValues.email.match(emailValidation) && (!emailValidation.test(formValues.email))) {
-      errors.email = "Email is not valid"
-  } else {
-      errors.email = ''
-  }  
+//   if(!formValues.email) {
+//     errors.email = "email is required"
+//   } else if (!formValues.email.match(emailValidation) && (!emailValidation.test(formValues.email))) {
+//       errors.email = "Email is not valid"
+//   } else {
+//       errors.email = ''
+//   }  
 
 
-  if(!formValues.phone) {
-    errors.phone = ""
-  } else if (!formValues.phone.match(phoneValidation) && (!phoneValidation.test(formValues.phone))) {
-      errors.phone = "Phone is not valid"
-  } else {
-      errors.phone = ''
-  }  
+//   if(!formValues.phone) {
+//     errors.phone = ""
+//   } else if (!formValues.phone.match(phoneValidation) && (!phoneValidation.test(formValues.phone))) {
+//       errors.phone = "Phone is not valid"
+//   } else {
+//       errors.phone = ''
+//   }  
 
-if(!formValues.subject) {
-  errors.subject = "subject is required"
-} else if (formValues.subject.length < 2 ) {
-  errors.subject = "Subject not valid"
-} else {
-  errors.subject =''
-}
+// if(!formValues.subject) {
+//   errors.subject = "subject is required"
+// } else if (formValues.subject.length < 2 ) {
+//   errors.subject = "Subject not valid"
+// } else {
+//   errors.subject =''
+// }
 
-if(!formValues.message) {
-  errors.message = "message is required"
-} else if (formValues.message.length < 2) {
-  errors.message = "Message not valid"
-} else {
-  errors.message =''
-}
+// if(!formValues.message) {
+//   errors.message = "message is required"
+// } else if (formValues.message.length < 2) {
+//   errors.message = "Message not valid"
+// } else {
+//   errors.message =''
+// }
 
-  return errors
+//   return errors
 
-}
+// }
 
 useEffect(()=> {
   if(Object.keys(formErrors).length === 0 && isSubmit) { /* empty */ }
