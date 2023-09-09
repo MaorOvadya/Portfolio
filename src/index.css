@@ -1,0 +1,14 @@
+:root {
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Sniglet', cursive;
+  font-family: 'Sriracha', cursive;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  background-color: rgb(249 250 251);
+  color:#526D82;
+}
