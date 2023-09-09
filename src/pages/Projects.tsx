@@ -31,6 +31,7 @@ function Projects() {
 
 export default Projects
 
+
 const projects = [ 
   {
     id: 1,
@@ -38,5 +39,5 @@ const projects = [
     text: `Teddies Vs Monster e-commerce platform for gaming board .`,
     stack: 'NextJs \n,TypeScript \n,Tailwind Css \n,swiper \n,Zuztand \n,strapi \n,Strip \n,Figma \n,Trello',
     link: 'https://teddies-vs-monsters-frontend.vercel.app,'
-  },
+  }
 ]

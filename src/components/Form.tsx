@@ -2,9 +2,20 @@ import Button from "./Button"
 import  Children, { useEffect, useState }  from "react"
 import emailjs from '@emailjs/browser';
 
+interface values {
+
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+
+}
+
 function Form() {
 
-const values = {firstName: "", lastName: "", email: "", phone: "", subject: "", message: ""}
+const values:values = {firstName: "", lastName: "", email: "", phone: "", subject: "", message: ""}
 
 const [formValues,setFormValues] = useState(values)
 
@@ -20,7 +31,7 @@ const handleChange = (e: { target: { name: any; value: any; }; }) => {
 }
 
 
-const handleSubmit = (e) => {
+const handleSubmit = (e: { preventDefault: () => void; }) => {
   e.preventDefault()
   setIsSubmit(true)
 
@@ -40,8 +51,7 @@ const handleSubmit = (e) => {
 }
 
 
-
-function sendEmail(e) {
+function sendEmail(e: { preventDefault?: () => void; target?: any; }) {
 
   emailjs.sendForm('gmail', 'template_gmail', e.target, 'FkrJpZXFzcsGrkdeE')
   .then((result) => {
@@ -142,7 +152,7 @@ useEffect(()=> {
                 value={formValues.firstName}
                 onChange={handleChange}
                 name='firstName' id='firstName' placeholder="*" type="text"/>
-              <p className="text-xs text-left pt-3 flex justify-center text-red-500">{formErrors.firstName}</p>
+              {/* <p className="text-xs text-left pt-3 flex justify-center text-red-500">{formErrors.firstName}</p> */}
             </div>
 
             <div>
@@ -151,7 +161,7 @@ useEffect(()=> {
                 value={formValues.lastName}
                 onChange={handleChange}
                 name='lastName' id='lastName' placeholder="*" type="text"/>
-              <p className="text-xs text-left pt-3 flex justify-center text-red-500">{formErrors.lastName}</p>
+              {/* <p className="text-xs text-left pt-3 flex justify-center text-red-500">{formErrors.lastName}</p> */}
             </div>
 
           </div>
@@ -164,7 +174,7 @@ useEffect(()=> {
                 value={formValues.email}
                 onChange={handleChange}
                 name='email' id='email' placeholder="* Email@example.com" type="text" />
-              <p className="text-xs text-left pt-3 flex justify-center text-red-500">{formErrors.email}</p>
+              {/* <p className="text-xs text-left pt-3 flex justify-center text-red-500">{formErrors.email}</p> */}
             </div>
 
             <div>
@@ -173,7 +183,7 @@ useEffect(()=> {
                 value={formValues.phone}
                 onChange={handleChange}
                 name='phone' id='phone' type="text" placeholder="xxx-xxx-xxxx" />
-              <p className="text-xs text-left pt-3 flex justify-center text-red-500">{formErrors.phone}</p>
+              {/* <p className="text-xs text-left pt-3 flex justify-center text-red-500">{formErrors.phone}</p> */}
            </div>
 
           </div>
@@ -186,7 +196,7 @@ useEffect(()=> {
                 value={formValues.subject}
                 onChange={handleChange}  
                 name='subject' id='subject' type="text" />
-              <p className="text-xs text-left pt-3 flex justify-center text-red-500">{formErrors.subject}</p>
+              {/* <p className="text-xs text-left pt-3 flex justify-center text-red-500">{formErrors.subject}</p> */}
             </div>
 
             <div className="flex flex-col w-full px-5 ">
@@ -195,7 +205,7 @@ useEffect(()=> {
               value={formValues.message}
               onChange={handleChange} 
               name="message" placeholder="* message" id='message'/>
-              <p className="text-xs text-left pt-3 flex justify-center text-red-500">{formErrors.message}</p>
+              {/* <p className="text-xs text-left pt-3 flex justify-center text-red-500">{formErrors.message}</p> */}
             </div>
 
           </div>
