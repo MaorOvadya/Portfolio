@@ -56,7 +56,7 @@ function clickHandle() {
               }
 
 
-            <div className="absolute top-6 right-5 w-[2.5rem] h-[2.5rem] border border-slate-300 rounded-[100%] duration-500" onClick={() => clickHandle(setOpen)}>
+            <div className="absolute top-6 right-5 w-[2.5rem] h-[2.5rem] border border-slate-300 rounded-[100%] duration-500" onClick={() => clickHandle()}>
               <span className="spanTop absolute block h-[1px] w-[25px] bg-[#526D82] right-[6.5px] bottom-[26px]"></span>
               <span className="spanMiddle absolute block h-[1px] w-[25px] bg-[#526D82] right-[6.5px] bottom-[18px]"></span>
               <span className="spanlower absolute block h-[1px] w-[25px] bg-[#526D82] right-[6.5px] bottom-[10px]"></span>

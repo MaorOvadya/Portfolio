@@ -1,5 +1,5 @@
 import Button from "./Button"
-import  Children, {  useState }  from "react"
+import   { Children, useState }  from "react"
 import emailjs from '@emailjs/browser';
 
 interface values {
@@ -31,13 +31,15 @@ const handleChange = (e: { target: { name: string; value: string; }; }) => {
 }
 
 
-const handleSubmit = (e) => {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
-  e.preventDefault()
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-  sendEmail(e)
-  // setIsSubmit(true)
-
+const handleSubmit = (event: { target: string | HTMLFormElement; }) => {
+  emailjs.sendForm('gmail', 'template_gmail', event.target, 'FkrJpZXFzcsGrkdeE')
+  .then((result) => {
+    alert('Messege sent successfully')
+      console.log(result.text);
+  }, (error) => {
+    console.log(error)
+  });
+}
   // const emailValidation = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/gm;
 
   // if (!isSubmit && !validation(formValues)){
@@ -50,19 +52,12 @@ const handleSubmit = (e) => {
   //         return null
   //       }
   //     }
-}
 
 
-function sendEmail(event: { target: string | HTMLFormElement; }) {
+// function sendEmail(event: { target: string | HTMLFormElement; }) {
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
-  emailjs.sendForm('gmail', 'template_gmail', event.target, 'FkrJpZXFzcsGrkdeE')
-  .then((result) => {
-    alert('Messege sent successfully')
-      console.log(result.text);
-  }, (error) => {
-    console.log(error)
-  });
+ 
 
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
     // event.target.reset 
@@ -73,7 +68,7 @@ function sendEmail(event: { target: string | HTMLFormElement; }) {
     // formValues.subject =""
     // formValues.message =""
     // formValues.phone =""
-}
+// }
 
 
 
