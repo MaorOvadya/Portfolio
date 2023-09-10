@@ -24,15 +24,18 @@ const [formValues,setFormValues] = useState(values)
 // const [isSubmit,setIsSubmit] = useState(false)
 
 
-const handleChange = (e) => {
+const handleChange = (e: { target: { name: string; value: string; }; }) => {
   const  {name,value}  = e.target
   setFormValues({...formValues, [name]:value})
   // setFormErrors((formValues))
 }
 
 
-const handleSubmit = (e: { preventDefault: () => void; }) => {
+const handleSubmit = (e) => {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
   e.preventDefault()
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+  sendEmail(e)
   // setIsSubmit(true)
 
   // const emailValidation = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/gm;
@@ -43,7 +46,6 @@ const handleSubmit = (e: { preventDefault: () => void; }) => {
 
   //   else if (isSubmit && validation(formValues)){
   //     if (formValues.firstName && formValues.lastName && formValues.email.match(emailValidation) && formValues.subject && formValues.message ) {
-  //       sendEmail(e)
   //       } else {
   //         return null
   //       }
@@ -51,27 +53,26 @@ const handleSubmit = (e: { preventDefault: () => void; }) => {
 }
 
 
-function sendEmail(e: { preventDefault?: () => void; target?: any; }) {
+function sendEmail(event: { target: string | HTMLFormElement; }) {
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-  emailjs.sendForm('gmail', 'template_gmail', e.target, 'FkrJpZXFzcsGrkdeE')
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
+  emailjs.sendForm('gmail', 'template_gmail', event.target, 'FkrJpZXFzcsGrkdeE')
   .then((result) => {
     alert('Messege sent successfully')
       console.log(result.text);
   }, (error) => {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-      console.log(error.text);
+    console.log(error)
   });
 
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
-    e.target.reset(); 
+    // event.target.reset 
 
-    formValues.firstName = ""
-    formValues.lastName =""
-    formValues.email =""
-    formValues.subject =""
-    formValues.message =""
-    formValues.phone =""
+    // formValues.firstName = ""
+    // formValues.lastName =""
+    // formValues.email =""
+    // formValues.subject =""
+    // formValues.message =""
+    // formValues.phone =""
 }
 
 
