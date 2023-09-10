@@ -1,5 +1,5 @@
 import Button from "./Button"
-import  Children, { useEffect, useState }  from "react"
+import  Children, {  useState }  from "react"
 import emailjs from '@emailjs/browser';
 
 interface values {
@@ -19,21 +19,21 @@ const values:values = {firstName: "", lastName: "", email: "", phone: "", subjec
 
 const [formValues,setFormValues] = useState(values)
 
-const [formErrors,setFormErrors] = useState({})
+// const [formErrors,setFormErrors] = useState({})
 
-const [isSubmit,setIsSubmit] = useState(false)
+// const [isSubmit,setIsSubmit] = useState(false)
 
 
-const handleChange = (e: { target: { name: string; value:string }; }) => {
+const handleChange = (e) => {
   const  {name,value}  = e.target
   setFormValues({...formValues, [name]:value})
-  setFormErrors((formValues))
+  // setFormErrors((formValues))
 }
 
 
 const handleSubmit = (e: { preventDefault: () => void; }) => {
   e.preventDefault()
-  setIsSubmit(true)
+  // setIsSubmit(true)
 
   // const emailValidation = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/gm;
 
@@ -136,9 +136,9 @@ function sendEmail(e: { preventDefault?: () => void; target?: any; }) {
 
 // }
 
-useEffect(()=> {
-  if(Object.keys(formErrors).length === 0 && isSubmit) { /* empty */ }
-},[formErrors,isSubmit])
+// useEffect(()=> {
+//   if(Object.keys(formErrors).length === 0 && isSubmit) { /* empty */ }
+// },[formErrors,isSubmit])
  
   return (
 
@@ -154,6 +154,7 @@ useEffect(()=> {
               <input className="border-b-2 w-[12rem] placeholder:text-red-500"
                 value={formValues.firstName}
                 onChange={handleChange}
+                required
                 name='firstName' id='firstName' placeholder="*" type="text"/>
               {/* <p className="text-xs text-left pt-3 flex justify-center text-red-500">{formErrors.firstName}</p> */}
             </div>
@@ -163,6 +164,7 @@ useEffect(()=> {
               <input className="border-b-2 w-[12rem] placeholder:text-red-500" 
                 value={formValues.lastName}
                 onChange={handleChange}
+                required
                 name='lastName' id='lastName' placeholder="*" type="text"/>
               {/* <p className="text-xs text-left pt-3 flex justify-center text-red-500">{formErrors.lastName}</p> */}
             </div>
@@ -176,6 +178,7 @@ useEffect(()=> {
               <input className="border-b-2 w-[14rem] md:w-[12rem] placeholder:text-red-500"
                 value={formValues.email}
                 onChange={handleChange}
+                required
                 name='email' id='email' placeholder="* Email@example.com" type="text" />
               {/* <p className="text-xs text-left pt-3 flex justify-center text-red-500">{formErrors.email}</p> */}
             </div>
@@ -197,7 +200,8 @@ useEffect(()=> {
               <label className="px-2" htmlFor="subject">Subject</label>
               <input className="border-b-2 w-[14rem] md:w-[12rem] lg:w-[20rem] placeholder:text-left placeholder:text-red-500" placeholder="*"
                 value={formValues.subject}
-                onChange={handleChange}  
+                onChange={handleChange}
+                required 
                 name='subject' id='subject' type="text" />
               {/* <p className="text-xs text-left pt-3 flex justify-center text-red-500">{formErrors.subject}</p> */}
             </div>
@@ -207,6 +211,7 @@ useEffect(()=> {
               <textarea className="border-2 p-3 rounded-md placeholder:text-red-500" cols={20} rows={8}
               value={formValues.message}
               onChange={handleChange} 
+              required
               name="message" placeholder="* message" id='message'/>
               {/* <p className="text-xs text-left pt-3 flex justify-center text-red-500">{formErrors.message}</p> */}
             </div>
