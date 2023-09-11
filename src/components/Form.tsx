@@ -28,7 +28,7 @@ const handleChange = (e: { target: { name: string; value: string; }; }) => {
 }
 
 
-const sendEmail = (e) => {
+const sendEmail = (e:any) => {
   
   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
   e.preventDefault();
