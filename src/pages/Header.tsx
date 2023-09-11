@@ -36,7 +36,7 @@ useEffect(() => {
         <div className="text-center grid grid-flow-cols grid-cols-1 lg:grid-cols-2 lg:my-12 mt-6 mb-6 gap-5 lg:px-6 px-3">
             <div className="containers bg-white rounded-xl w-full h-full shadow-2xl">
                     <div className="text-container h-full w-full felx flex-col py-[6rem] px-[2rem] md:px-[4rem] text-left">
-                        <p className="text-base">hi,my name is</p>
+                        <p className="text-base capitalize">hi,my name is</p>
                         <p className="text-6xl text-red-500 capitalize pb-3 pt-3">maor ovadya</p>
                         <p className="text-lg">Full-Stack Developer in Vancuver Canada</p>
                         <div className="changing-text pt-5">
@@ -44,7 +44,7 @@ useEffect(() => {
                             sequence={[
                                 "Hello there!!!",
                                 1500,
-                                "I'm Front&Back-end developer",
+                                "I'm a Front&Back-end developer",
                                 1500,
                                 "I'm Open to work",
                                 1500,

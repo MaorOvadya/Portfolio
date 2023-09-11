@@ -29,7 +29,7 @@ const handleChange = (e: { target: { name: string; value: string; }; }) => {
 
 
 const sendEmail = (e:any) => {
-  
+
   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
   e.preventDefault();
 
@@ -41,6 +41,18 @@ const sendEmail = (e:any) => {
   }, (error) => {
     console.log(error)
   });
+
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
+  e.target.reset()
+
+  values.firstName =''
+  values.lastName =''
+  values.email =''
+  values.phone =''
+  values.subject =''
+  values.message =''
+  
+
 };
 
 
