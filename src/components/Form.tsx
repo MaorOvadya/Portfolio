@@ -15,6 +15,8 @@ interface values {
 
 function Form() {
 
+
+  
 const values:values = {firstName: "", lastName: "", email: "", phone: "", subject: "", message: ""}
 
 const [formValues,setFormValues] = useState(values)
@@ -25,7 +27,13 @@ const handleChange = (e: { target: { name: string; value: string; }; }) => {
   setFormValues({...formValues, [name]:value})
 }
 
-const handleSubmit = (e: { target: string | HTMLFormElement; }) => {
+
+const sendEmail = (e) => {
+  
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
+  e.preventDefault();
+
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
   emailjs.sendForm('gmail', 'template_gmail', e.target, 'FkrJpZXFzcsGrkdeE')
   .then((result) => {
     alert('Messege sent successfully')
@@ -33,12 +41,13 @@ const handleSubmit = (e: { target: string | HTMLFormElement; }) => {
   }, (error) => {
     console.log(error)
   });
-} 
+};
+
 
   return (
 
     <div>        
-        <form onSubmit={handleSubmit}
+        <form  onSubmit={sendEmail}
         className="bg-white w-full h-full flex flex-col py-[2rem] capitalize rounded-xl shadow-2xl">
         <p className="text-2xl text-cetner pb-8 lg:px-[5%]">Get in touch</p>
         <p className="text-xs text-center lg:text-left pb-5 lg:px-[5%] border-b"><span className="mx-3 text-red-500">*</span>requerid field </p>
