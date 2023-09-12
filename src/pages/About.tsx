@@ -193,13 +193,13 @@ export const frameWork = [
 
 const aboutMeText = `Hello, my name is Maor Ovadya.\n
 I am from Vancouver,Canada.
-I’m passionate about programming languages and creating front- and back-end applications and I am always seeking new challenges in tech.\n
+I’m passionate about programming languages and creating front- and back-end applications, and I am always seeking new challenges in tech.\n
 The main technologies I use are GitHub, VisualStudio, HTML, CSS, React, JavaScript, and MySQL.\n
 I’m a curious and creative person.\n
 I am always interested in picking up new skills in areas like frameworks (Angular, Vuejs, Gatsby), programming languages (TypeScript, Java, Python, C#, C++, php), developing environments (nodeJs,NextJs), and technologies (Sass, Tailwind, Bootstrap ,Express.js, GSAP, jQuery, MongoDB).
 I am a great team player and believe in the group, the process and the goals but I am also confident and am equally as comfortable working individually.\n
 Working with a team means there will be varying opinions and ideas.\n
 Even if you think your idea is best, you should listen to all ideas before pushing yours. Search for compromises, and remain respectful if your work is criticized.\n
-I am not afraid of mistakes, I take responsibility for my mistakes and look for solutions. I always try to learn from your errors.`
+I am not afraid of mistakes, I take responsibility for my mistakes and look for solutions. I always try to learn from my errors.`
 
 
