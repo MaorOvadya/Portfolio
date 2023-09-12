@@ -4,38 +4,18 @@ import Title from '../components/Title'
 //React iconst knowledge
 import {AiFillHtml5,AiFillGithub} from 'react-icons/ai'
 import {FaCss3Alt,FaFontAwesomeFlag} from 'react-icons/fa'
-import {SiTailwindcss, SiVite,SiGreensock,SiVisualstudio,SiCplusplus,SiCsharp} from 'react-icons/si'
+import {SiTailwindcss, SiVite,SiGreensock,SiVisualstudio,SiCplusplus,SiCsharp,SiJquery} from 'react-icons/si'
 import {TbBrandNextjs,} from 'react-icons/tb'
 import {BsFillBootstrapFill,} from 'react-icons/bs'
 import {BiLogoJavascript,BiLogoReact,BiLogoNodejs,BiLogoSass,BiLogoTypescript,BiLogoJava} from 'react-icons/bi'
-// import { useEffect } from 'react'
-
-// import { gsap } from "gsap/all";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function About() {
   
-//   useEffect(() => {
-//     gsap.registerPlugin(ScrollTrigger);
-//     gsap.from(".knowledge-container", {
-//       duration: 5,
-//       autoAlpha: 0,
-//       y:100,
-//       scrollTrigger: {
-//         trigger: ".knowledge-container",
-//         markers:true,
-//       },
-//     })
-
-// },[]) 
-
   return (
-    <div id="about" className='border-b border-slate-300 box-border '>
+    <div id="about" className='border-b pt-5 border-slate-300 box-border '>
         <Title title='About Me'/>
-
           <div className='border-b border-slate-300 pb-10'>
-
-              <div className='flex flex-wrap md:px-36 px-8 text-center md:text-left leading-8 '>
+              <div className='flex flex-wrap md:px-36 px-8 text-center md:text-left leading-8'>
                 <div className=''>
                   {aboutMeText.split('\n').map((text,index) => <p key={index}>{text}</p>)}
                 </div>
@@ -70,7 +50,7 @@ function About() {
 
                 <div className='container-Css px-5 bg-white border border-slate-300 rounded-lg w-[20rem] shadow-2xl shadow-slate-600'>
 
-                <p className=' text-2xl text-center p-5 font-extrabold text-slate-600 bg-white'>Languages</p>
+                <p className=' text-2xl text-center p-5 font-extrabold text-slate-600 bg-white'>Languages & libraries</p>
 
                 <div>
                 {Language.map((lang,index) => {return (
@@ -83,8 +63,8 @@ function About() {
                       <p className='text-xl'>{lang.typeScriptText}</p> 
                       <p className='text-5xl text-purple-500'>{lang.cPlus}</p> 
                       <p className='text-xl'>{lang.cPlusText}</p> 
-                      <p className='text-5xl text-red-400'>{lang.cSharp}</p> 
-                      <p className='text-xl'>{lang.cSharpText}</p> 
+                      <p className='text-5xl text-red-400'>{lang.jquery}</p> 
+                      <p className='text-xl'>{lang.jqueryText}</p> 
                       <p className='text-5xl text-orange-400'>{lang.java}</p> 
                       <p className='text-xl'>{lang.javaText}</p> 
                   </div>
@@ -174,8 +154,8 @@ export const Language = [
     cPlusText: 'C++'
   },
   {
-    cSharp: <SiCsharp/>,
-    cSharpText: 'Csharp'
+    jquery: <SiJquery/>,
+    jqueryText: 'Jquery'
   },
   {
     java: <BiLogoJava/>,

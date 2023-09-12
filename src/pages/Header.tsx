@@ -32,7 +32,7 @@ useEffect(() => {
 },[]) 
 
   return (
-    <div id="home" className="md:my-[6rem] border-b border-slate-300 box-border">
+    <div id="home" className="border-b border-slate-300 box-border">
         <div className="text-center grid grid-flow-cols grid-cols-1 lg:grid-cols-2 lg:my-12 mt-6 mb-6 gap-5 lg:px-6 px-3">
             <div className="containers bg-white rounded-xl w-full h-full shadow-2xl">
                     <div className="text-container h-full w-full felx flex-col py-[6rem] px-[2rem] md:px-[4rem] text-left">
@@ -66,7 +66,7 @@ useEffect(() => {
                     </div>
             </div>
 
-                <div className="containers w-full h-full grid grid-rows-4 md:grid-rows-2 grid-flow-col-dense gap-3 ">
+                <div className="containers w-full h-full grid grid-rows-3 md:grid-rows-2 grid-flow-col-dense gap-5 ">
 
                     <div className="about-container bg-white rounded-xl row-span-1 md:row-span-2 hover:scale-90 shadow-2xl duration-500">
                         <div className="h-full flex flex-col justify-center items-center ">
@@ -94,7 +94,7 @@ useEffect(() => {
                         </div>
                         <div className="email flex flex-col justify-center items-center text-5xl">
                             <Title title='Email me'/>
-                            <div className="text-red-500 py-6 duration-300 ease-in-out hover:rotate-[18deg] hover:scale-125 ">
+                            <div className="text-red-500 duration-300 ease-in-out hover:rotate-[18deg] hover:scale-125 ">
                                 <a href="mailto:maorovadya@icloud.com"><MdEmail/></a>
                             </div>
                         </div>

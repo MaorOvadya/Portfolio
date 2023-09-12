@@ -3,7 +3,7 @@ import Form from "../components/Form"
 
 function Contact() {
   return (
-    <div id="contact" className="w-full h-full my-[3rem] border-slate-300">
+    <div id="contact" className="w-full h-full pt-5 border-slate-300">
         <Title title='Contact'/>
         <div className="text-center w-full h-full grid grid-flow-cols md:grid-cols-2 md:my-12 my-6 gap-5 px-6">
               <div className="bg-white flex flex-col justify-center items-center px-auto py-[3rem] md:py-[6rem] capitalize rounded-xl shadow-2xl">
