@@ -4,7 +4,7 @@ import Title from '../components/Title'
 //React iconst knowledge
 import {AiFillHtml5,AiFillGithub} from 'react-icons/ai'
 import {FaCss3Alt,FaFontAwesomeFlag} from 'react-icons/fa'
-import {SiTailwindcss, SiVite,SiGreensock,SiVisualstudio,SiCplusplus,SiCsharp,SiJquery} from 'react-icons/si'
+import {SiTailwindcss, SiVite,SiGreensock,SiVisualstudio,SiCplusplus,SiJquery} from 'react-icons/si'
 import {TbBrandNextjs,} from 'react-icons/tb'
 import {BsFillBootstrapFill,} from 'react-icons/bs'
 import {BiLogoJavascript,BiLogoReact,BiLogoNodejs,BiLogoSass,BiLogoTypescript,BiLogoJava} from 'react-icons/bi'
