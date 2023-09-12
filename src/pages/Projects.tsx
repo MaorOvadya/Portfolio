@@ -20,13 +20,13 @@ const [isHover,setIsHover] = useState(false)
                           <div className={`z-50 text-white text-center md:absolute w-full h-full md:hover:border-l border-b border-white md:hover:border-black bg-[rgb(239,68,68)]  md:bg-[rgb(239,68,68,0.8)] trans md:rounded-xl hover:transition-all hover:duration-700 duration-700 hover:ease-in ${isHover ? "md:opacity-100	" : "md:opacity-0"}`}>
 
                             <div className='flex flex-col items-center relative md:top-[25%]'>
-                                <p className='px-5 capitalize text-xl pb-5 pt-3'>Teddies Vs Monster</p>
+                                <p className='px-5 capitalize text-xl pb-5 pt-3'>teddies vs monsters</p>
                                 <button className="bg-slate-400 text-white w-[10rem] h-[2.5rem] rounded-md transition-all duration-500 ease-in hover:bg-white hover:text-red-500 hover:border hover:border-slate-400"><a className='pb-10 pt-10' target='_blank' href={pro.link}>See More</a></button>
                                 <p className='px-5 pt-5 capitalize text-xl pb-3'>E-Commerce Platform For Gaming Board.</p>
                             </div>
                           </div>
 
-                          <div className={`z-30 text-white text-center md:absolute top-0  md:w-[20rem] h-full bg-[rgb(239,68,68)] md:border border-black md:rounded-xl md:hover:transition-all md:hover:duration-700 duration-700 md:hover:ease-in ${isHover ? "md:left-[-300px] md:opacity-100	" : "md:opacity-0 md:left-0"}`}>
+                          <div className={`z-30 text-white text-center md:absolute top-0 md:w-[20rem] h-full bg-[rgb(239,68,68)] md:border border-black md:rounded-xl md:hover:transition-all md:hover:duration-700 duration-700 md:hover:ease-in ${isHover ? "md:left-[-300px] md:opacity-100	" : "md:opacity-0 md:left-0"}`}>
                               <div className='flex flex-col pt-2'>
                                 <p className='captitalize pb-3 pt-3 text-lg border-b border-white'>tech stack</p>
                                 <div className='flex flex-wrap h-[12rem] pt-3'>
