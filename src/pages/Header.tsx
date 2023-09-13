@@ -38,7 +38,7 @@ useEffect(() => {
                     <div className="text-container h-full w-full felx flex-col py-[6rem] px-[2rem] md:px-[4rem] text-left">
                         <p className="text-base">Hi,my name is</p>
                         <p className="text-6xl text-red-500 capitalize pb-3 pt-3">maor ovadya</p>
-                        <p className="text-lg">Full-Stack Developer in Vancuver Canada</p>
+                        <p className="text-lg">Full-Stack Developer in Canada</p>
                         <div className="changing-text pt-5">
                         <TypeAnimation
                             sequence={[

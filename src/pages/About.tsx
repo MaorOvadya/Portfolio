@@ -24,7 +24,7 @@ function About() {
           </div>
 
         <div className="knowledge-container h-full w-full pt-10">
-            <p className="text text-center pb-5 pt-5 text-2xl font-semibold">My knowledge</p>
+            <p className="text text-center pb-5 pt-5 text-2xl font-semibold">Tech Skills</p>
             <div className='flex md:flex-row flex-col gap-5 items-center md:items-stretch md:justify-evenly capitalize pb-10 pt-10 px-5'>
                 <div className='container-Css bg-white border border-slate-300 rounded-lg w-[20rem] shadow-2xl shadow-slate-600'>
                     <p className=' text-2xl text-center p-5 font-extrabold text-slate-600 bg-white'>css & animations</p>

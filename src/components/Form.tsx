@@ -4,8 +4,7 @@ import emailjs from '@emailjs/browser';
 
 interface values {
 
-  firstName: string;
-  lastName: string;
+  name: string;
   email: string;
   phone: string;
   subject: string;
@@ -17,7 +16,7 @@ function Form() {
 
 
   
-const values:values = {firstName: "", lastName: "", email: "", phone: "", subject: "", message: ""}
+const values:values = {name: "", email: "", phone: "", subject: "", message: ""}
 
 const [formValues,setFormValues] = useState(values)
 
@@ -38,23 +37,20 @@ const sendEmail = (e:any) => {
   .then((result) => {
     alert('Messege sent successfully')
       console.log(result.text);
-  }, (error) => {
-    console.log(error)
-  });
-
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
-  e.target.reset()
-
-  values.firstName =''
-  values.lastName =''
-  values.email =''
-  values.phone =''
-  values.subject =''
-  values.message =''
-  
-
+    }, (error) => {
+      console.log(error)
+    });
+    
+    
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
+    e.target.reset()
+    values.name =''
+    values.email =''
+    values.phone =''
+    values.subject =''
+    values.message =''
+    
 };
-
 
   return (
 
@@ -66,21 +62,12 @@ const sendEmail = (e:any) => {
           <div className="flex flex-col lg:flex-row justify-center gap-[1rem] pt-10">
 
             <div>
-              <label className="px-2" htmlFor='firstName'>First name:</label>
-              <input className="border-b-2 w-[12rem] placeholder:text-red-500"
-                value={formValues.firstName}
+              <label className="px-2" htmlFor='name'>Name:</label>
+              <input className="border-b-2 w-[22rem] placeholder:text-red-500"
+                value={formValues.name}
                 onChange={handleChange}
                 required
-                name='firstName' id='firstName' placeholder="*" type="text"/>
-            </div>
-
-            <div>
-              <label className="px-2" htmlFor="lastName">Last name:</label>
-              <input className="border-b-2 w-[12rem] placeholder:text-red-500" 
-                value={formValues.lastName}
-                onChange={handleChange}
-                required
-                name='lastName' id='lastName' placeholder="*" type="text"/>
+                name='name' id='name' placeholder="*" type="text"/>
             </div>
 
           </div>
@@ -101,7 +88,7 @@ const sendEmail = (e:any) => {
               <input className="border-b-2 w-[14rem] md:w-[12rem] placeholder:text-red-500"
                 value={formValues.phone}
                 onChange={handleChange}
-                name='phone' id='phone' type="text" placeholder="xxx-xxx-xxxx" />
+                name='phone' id='phone' type="number" placeholder="xxx-xxx-xxxx" />
            </div>
 
           </div>
