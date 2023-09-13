@@ -63,7 +63,7 @@ const sendEmail = (e:any) => {
 
             <div>
               <label className="px-2" htmlFor='name'>Name:</label>
-              <input className="border-b-2 w-[22rem] placeholder:text-red-500"
+              <input className="border-b-2 w-[14rem] md:w-[22rem] placeholder:text-red-500"
                 value={formValues.name}
                 onChange={handleChange}
                 required
