@@ -6,7 +6,6 @@ interface values {
 
   name: string;
   email: string;
-  phone: string;
   subject: string;
   message: string;
 
@@ -16,7 +15,7 @@ function Form() {
 
 
   
-const values:values = {name: "", email: "", phone: "", subject: "", message: ""}
+const values:values = {name: "", email: "", subject: "", message: ""}
 
 const [formValues,setFormValues] = useState(values)
 
@@ -46,7 +45,6 @@ const sendEmail = (e:any) => {
     e.target.reset()
     values.name =''
     values.email =''
-    values.phone =''
     values.subject =''
     values.message =''
     
@@ -56,40 +54,32 @@ const sendEmail = (e:any) => {
 
     <div>        
         <form  onSubmit={sendEmail}
-        className="bg-white w-full h-full flex flex-col py-[2rem] capitalize rounded-xl shadow-2xl">
+        className="bg-white w-full h-full flex flex-col py-[2rem] capitalize rounded-xl border-slate-300 border shadow-2xl">
         <p className="text-2xl text-cetner pb-8 lg:px-[5%]">Get in touch</p>
         <p className="text-xs text-center lg:text-left pb-5 lg:px-[5%] border-b"><span className="mx-3 text-red-500">*</span>requerid field </p>
           <div className="flex flex-col lg:flex-row justify-center gap-[1rem] pt-10">
 
             <div>
               <label className="px-2" htmlFor='name'>Name:</label>
-              <input className="border-b-2 w-[14rem] md:w-[22rem] placeholder:text-red-500"
+              <input className="border-b-2 w-[14rem] md:w-[16rem] lg:w-[22rem] placeholder:text-red-500 placeholder:text-xs"
                 value={formValues.name}
                 onChange={handleChange}
                 required
-                name='name' id='name' placeholder="*" type="text"/>
+                name='name' id='name' placeholder="* Enter your name" type="text"/>
             </div>
 
           </div>
 
-          <div className="flex flex-col lg:flex-row justify-center py-6 gap-[1rem]">
+          <div className="flex flex-col lg:flex-row justify-center pt-5 pb-3 gap-[1rem]">
 
             <div>
               <label className="px-2" htmlFor="email">Email:</label>
-              <input className="border-b-2 w-[14rem] md:w-[12rem] placeholder:text-red-500"
+              <input className="border-b-2 w-[14rem] md:w-[16rem] lg:w-[22rem] placeholder:text-red-500 placeholder:text-xs"
                 value={formValues.email}
                 onChange={handleChange}
                 required
-                name='email' id='email' placeholder="* Email@example.com" type="text" />
+                name='email' id='email' placeholder="* Enter your email" type="text" />
             </div>
-
-            <div>
-              <label className="px-2" htmlFor="phone" >Phone:</label>
-              <input className="border-b-2 w-[14rem] md:w-[12rem] placeholder:text-red-500"
-                value={formValues.phone}
-                onChange={handleChange}
-                name='phone' id='phone' type="number" placeholder="xxx-xxx-xxxx" />
-           </div>
 
           </div>
 
@@ -97,7 +87,7 @@ const sendEmail = (e:any) => {
 
             <div className="w-full py-3">
               <label className="px-2" htmlFor="subject">Subject</label>
-              <input className="border-b-2 w-[14rem] md:w-[12rem] lg:w-[20rem] placeholder:text-left placeholder:text-red-500" placeholder="*"
+              <input className="border-b-2 w-[14rem] md:w-[16rem] lg:w-[22rem] placeholder:text-left placeholder:text-red-500 placeholder:text-xs" placeholder="* Enter your subject"
                 value={formValues.subject}
                 onChange={handleChange}
                 required 
@@ -115,7 +105,7 @@ const sendEmail = (e:any) => {
 
           </div>
 
-          <div className="flex mx-auto pb-0 pt-0 ">
+          <div className="flex mx-auto ">
             <Button props={Children}>
                 <button className="btn bg-red-500 text-white w-[10rem] h-[2.5rem] rounded-md transition-all duration-500 ease-in hover:bg-white hover:text-red-500 hover:border hover:border-slate-400" 
                 type="submit">Get in touch</button>

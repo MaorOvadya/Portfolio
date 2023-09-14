@@ -12,7 +12,7 @@ import {BiLogoJavascript,BiLogoReact,BiLogoNodejs,BiLogoSass,BiLogoTypescript,Bi
 function About() {
   
   return (
-    <div id="about" className='border-b pt-5 border-slate-300 box-border '>
+    <div id="about" className='border-b pt-5 bg-white border-slate-300 box-border '>
         <Title title='About Me'/>
           <div className='border-b border-slate-300 pb-10'>
               <div className='flex flex-wrap md:px-36 px-8 text-center md:text-left leading-8'>

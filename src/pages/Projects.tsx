@@ -14,7 +14,7 @@ const [isHover,setIsHover] = useState(false)
       <div className='z-40 flex flex-wrap justify-evenly relative gap-10'>
 
             {projects.map((pro) =>
-            <div key={pro.id} className='mx-5 border-black rounded-t-lg md:rounded-xl border w-[27rem] h-full' onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
+            <div key={pro.id} className='mx-5 border-black rounded-t-lg rounded-b-xl md:rounded-xl border w-[27rem] h-full' onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
                     <div className='flex flex-col capitalize rounded-t-lg md:rounded-xl text-black relative'>
                       <img className='z-40 rounded-t-lg md:rounded-xl hover:transition-all hover:duration-500 hover:ease-in' src={sitePic}/>
                           <div className={`z-50 text-white text-center md:absolute w-full h-full md:hover:border-l border-b border-white md:hover:border-black bg-[rgb(239,68,68)]  md:bg-[rgb(239,68,68,0.8)] trans md:rounded-xl hover:transition-all hover:duration-700 duration-700 hover:ease-in ${isHover ? "md:opacity-100	" : "md:opacity-0"}`}>
@@ -26,7 +26,7 @@ const [isHover,setIsHover] = useState(false)
                             </div>
                           </div>
 
-                          <div className={`z-30 text-white text-center md:absolute top-0 md:w-[20rem] h-full bg-[rgb(239,68,68)] md:border border-black md:rounded-xl md:hover:transition-all md:hover:duration-700 duration-700 md:hover:ease-in ${isHover ? "md:left-[-300px] md:opacity-100	" : "md:opacity-0 md:left-0"}`}>
+                          <div className={`z-30 text-white text-center md:absolute top-0  md:w-[20rem] h-full bg-[rgb(239,68,68)] md:border border-black rounded-b-xl md:rounded-xl md:hover:transition-all md:hover:duration-700 duration-700 md:hover:ease-in ${isHover ? "md:left-[-300px] md:opacity-100	" : "md:opacity-0 md:left-0"}`}>
                               <div className='flex flex-col pt-2'>
                                 <p className='captitalize pb-3 pt-3 text-lg border-b border-white'>tech stack</p>
                                 <div className='flex flex-wrap h-[12rem] pt-3'>
