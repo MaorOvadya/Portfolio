@@ -21,7 +21,7 @@ function Projects() {
                   {pro.TeddiesAndMonsterText.split("\n").map((t, index) => (
                     <div
                       key={index}
-                      className="border-2 border-slate-400 bg-gradient-to-tr from-amber-300 to-white self-center p-3 rounded-md">
+                      className=" bg-gradient-to-tr from-amber-300 to-white self-center p-3 rounded-md">
                       <p
                         key={index}
                         className="capitalize text-base font-extralight">
