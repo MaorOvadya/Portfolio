@@ -21,8 +21,10 @@ function Projects() {
                   {pro.TeddiesAndMonsterText.split("\n").map((t, index) => (
                     <div
                       key={index}
-                      className="border-2 border-slate-400 self-center p-3 rounded-md">
-                      <p key={index} className="capitalize text-base font-">
+                      className="border-2 border-slate-400 bg-gradient-to-tr from-amber-300 to-white self-center p-3 rounded-md">
+                      <p
+                        key={index}
+                        className="capitalize text-base font-extralight">
                         {t}
                       </p>
                     </div>
@@ -36,12 +38,12 @@ function Projects() {
                   </div>
                   <div className="flex flex-col items-center gap-5 sm:flex-row justify-between w-full ">
                     <p className="font-thin">made by group cooperation</p>
-                    <button className="bg-slate-400 text-white w-[10rem] h-[2.5rem] rounded-md transition-all duration-500 ease-in hover:bg-white hover:text-red-500 hover:border hover:border-slate-400">
+                    <button className="bg-slate-400 text-white w-[10rem] h-[2.5rem] rounded-md transition-all duration-500 ease-in hover:bg-white hover:text-amber-300 hover:border hover:border-slate-400">
                       <a
                         className="pb-10 pt-10"
                         target="_blank"
                         href={pro.TeddiesAndMonsterLink}>
-                        See More
+                        See Project
                       </a>
                     </button>
                   </div>
