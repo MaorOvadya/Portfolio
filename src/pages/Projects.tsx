@@ -17,19 +17,21 @@ function Projects() {
                 {pro.TeddiesAndMonsterTitle}
               </p>
               <div className="flex flex-wrap-reverse xl:flex-wrap justify-evenly p-10">
-                <div className="flex flex-wrap py-5 w-[30rem] text-center md:text-left leading-8">
+                <div className="flex flex-wrap py-5 w-[30rem] text-left leading-8">
                   {pro.TeddiesAndMonsterText.split("\n").map((t, index) => (
                     <div
                       key={index}
                       className="border-2 border-slate-400 self-center p-3 rounded-md">
-                      <p key={index} className="capitalize text-base ">
+                      <p key={index} className="capitalize text-base font-">
                         {t}
                       </p>
                     </div>
                   ))}
-                  <div className="capitalize text-base font-extralight  py-5">
+                  <div className="capitalize text-base font-extralight py-5">
                     {pro.TeddiesAndMonsterStack.split("\n").map((s, index) => (
-                      <p key={index}>{s}</p>
+                      <p className="text-left" key={index}>
+                        {s}
+                      </p>
                     ))}
                   </div>
                   <div className="flex flex-col items-center gap-5 sm:flex-row justify-between w-full ">
@@ -47,7 +49,7 @@ function Projects() {
 
                 <div className="">
                   <img
-                    className="z-40 w-fit md:w-[30rem] h-fit rounded-md"
+                    className="z-40 w-fit md:w-[30rem] rounded-md"
                     src={sitePic}
                   />
                 </div>
