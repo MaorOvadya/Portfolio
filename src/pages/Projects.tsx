@@ -47,7 +47,7 @@ function Projects() {
 
                 <div className="">
                   <img
-                    className="z-40 w-fit md:w-[30rem] h-full rounded-md"
+                    className="z-40 w-fit md:w-[30rem] h-fit rounded-md"
                     src={sitePic}
                   />
                 </div>
