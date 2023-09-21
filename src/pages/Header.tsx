@@ -32,7 +32,7 @@ useEffect(() => {
 },[]) 
 
   return (
-    <div id="home" className="border-b border-slate-300 box-border">
+    <div id="home" className="border-b border-slate-300 box-border md:pt-10">
         <div className="text-center grid grid-flow-cols grid-cols-1 lg:grid-cols-2 lg:my-12 mt-6 mb-6 gap-5 lg:px-6 px-3">
             <div className="containers bg-white rounded-xl w-full h-full shadow-2xl">
                     <div className="text-container h-full w-full felx flex-col py-[6rem] px-[2rem] md:px-[4rem] text-left">
@@ -70,17 +70,17 @@ useEffect(() => {
 
                     <div className="about-container bg-white rounded-xl row-span-1 md:row-span-2 hover:scale-90 shadow-2xl duration-500">
                         <div className="h-full flex flex-col justify-center items-center ">
-                            <Title title='About me'/>
+                            <Title number="" title='About me'/>
                             <div className="text-red-500 text-5xl animate-bounce pt-5 pb-5 cursor-pointer">
                                 <Link to='about' spy={true} smooth={true} offset={-100} duration={200}><BsFillArrowDownCircleFill/></Link>
                             </div>
                         </div>
                     </div>
 
-                    <div className="containers social-container flex flex-col justify-evenly rounded-xl row-span-2 hover:scale-90 shadow-2xl duration-500 bg-gradient-to-tr from-amber-200 to-white">
+                    <div className="containers social-container flex flex-col justify-evenly rounded-xl row-span-2 hover:scale-90 shadow-2xl duration-500 bg-gradient-to-tr from-red-500 to-white">
                         <div className="social-media flex flex-col items-center text-5xl">
-                        <Title title='Social media'/>
-                            <div className="text-red-500 flex gap-5 py-3">
+                                <Title number="" title='Social media'/>
+                            <div className="text-white flex gap-5">
                                 <div className="linkedin duration-300 hover:scale-125 ease-in ">
                                     <a target="_blank" href="https://www.linkedin.com/in/maor-ovadya-72b011240/"><AiFillLinkedin/></a>
                                 </div>
@@ -93,8 +93,8 @@ useEffect(() => {
                             </div>
                         </div>
                         <div className="email flex flex-col justify-center items-center text-5xl">
-                            <Title title='Email me'/>
-                            <div className="text-red-500 duration-300 ease-in-out hover:rotate-[18deg] hover:scale-125 ">
+                            <Title number="" title='Email me'/>
+                            <div className="text-white duration-300 ease-in-out hover:rotate-[18deg] hover:scale-125 pb-0 md:pb-5 lg:pb-0 ">
                                 <a href="mailto:maorovadya@icloud.com"><MdEmail/></a>
                             </div>
                         </div>

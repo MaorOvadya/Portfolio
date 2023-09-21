@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import {AiFillGithub,AiFillLinkedin,AiFillFacebook} from 'react-icons/ai'
 
 import {gsap} from 'gsap'
+import Title from "./Title";
 
 function Navbar() {
 
@@ -66,23 +67,23 @@ function clickHandle() {
               {open ?
               <div> 
                 <ul className='flex flex-col cursor-pointer'>
-                    <Link className='linksMobile border-b border-slate-300 transition-all duration-300 ease-in hover:text-white hover:bg-red-500 mx-[1rem] hover:rounded-lg px-6 py-3 w-[60%]' to="about" spy={true} smooth={true} offset={-100} duration={200}>About</Link>
-                    <Link className='linksMobile border-b border-slate-300 transition-all duration-500 ease-in hover:text-white hover:bg-red-500 mx-[1rem] hover:rounded-lg px-6 py-3 w-[70%]' to='projects' spy={true} smooth={true} offset={-100} duration={200}>Projects</Link>
-                    <Link className='linksMobile transition-all duration-500 ease-in hover:text-white hover:bg-red-500 hover:border-white mx-[1rem] px-6 py-3 border-b hover:rounded-lg border-slate-300 w-[80%]' to='contact' spy={true} smooth={true} offset={-100} duration={200}>Contact</Link>
-                  <li className='linksMobile gap-5 transition-all duration-500 ease-in text-red-500 border-b border-slate-300 hover:text-white hover:border-white hover:rounded-lg hover:bg-red-500 mx-[1rem] px-6 py-3 w-[90%]'>
+                    <Link className='linksMobile border-b border-slate-300 transition-all duration-300 ease-in mx-[1rem] hover:rounded-lg px-6 py-3 w-[60%]' to="about" spy={true} smooth={true} offset={-100} duration={200}><span className="text-red-500 text-xs">01.</span>About</Link>
+                    <Link className='linksMobile border-b border-slate-300 transition-all duration-500 ease-in mx-[1rem] hover:rounded-lg px-6 py-3 w-[70%]' to='projects' spy={true} smooth={true} offset={-100} duration={200}><span className="text-red-500 text-xs">02.</span>Projects</Link>
+                    <Link className='linksMobile transition-all duration-500 ease-in mx-[1rem] px-6 py-3 border-b hover:rounded-lg border-slate-300 w-[80%]' to='contact' spy={true} smooth={true} offset={-100} duration={200}><span className="text-red-500 text-xs">03.</span>Contact</Link>
+                  <li className='linksMobile gap-5 transition-all duration-500 ease-in text-red-500 border-b border-slate-300 hover:border-red-500 mx-[1rem] px-6 py-3 w-[90%]'>
                     <Link to='resume'>Resume</Link>
                   </li>
                 </ul>
 
                     <div className="text-red-500 flex gap-5 p-6 text-4xl">
                         <div className="linkedin duration-300 hover:scale-125 ease-in">
-                            <a className="text-[#526D82]" target="_blank" href="https://www.linkedin.com/in/maor-ovadya-72b011240/"><AiFillLinkedin/></a>
+                            <a className="text-[#526D82] hover:text-red-500 hover:opacity-[0.8]" target="_blank" href="https://www.linkedin.com/in/maor-ovadya-72b011240/"><AiFillLinkedin/></a>
                         </div>
                         <div className="github duration-300 hover:scale-125 ease-in">
-                            <a className="text-[#526D82]" target="_blank" href="https://github.com/MaorOvadya"><AiFillGithub/></a>
+                            <a className="text-[#526D82] hover:text-red-500 hover:opacity-[0.8]" target="_blank" href="https://github.com/MaorOvadya"><AiFillGithub/></a>
                         </div>
                         <div className="facebook duration-300 hover:scale-125 ease-in">
-                            <a className="text-[#526D82]" target="_blank" href="https://www.facebook.com/maor.ovadya"><AiFillFacebook/></a>
+                            <a className="text-[#526D82] hover:text-red-500 hover:opacity-[0.8] transition-all duration-300 ease-in" target="_blank" href="https://www.facebook.com/maor.ovadya"><AiFillFacebook/></a>
                         </div>
                     </div>
 
