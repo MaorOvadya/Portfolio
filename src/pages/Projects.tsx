@@ -70,7 +70,7 @@ function Projects() {
               <p className="px-5 text-center capitalize text-2xl pb-10 pt-10">
                 {pro.LandingPageTitle}
               </p>
-              <div className="flex flex-wrap-reverse xl:flex-wrap justify-evenly p-10">
+              <div className="flex flex-wrap xl:flex-wrap justify-evenly p-10">
                 <div className="">
                   <img
                     className="z-40 w-fit md:w-[30rem] rounded-md"

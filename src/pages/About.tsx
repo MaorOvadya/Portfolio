@@ -1,6 +1,7 @@
 //TITLE
 import Title from "../components/Title";
 
+import AboutPicture from "../assets/images/IMG_0307.jpeg";
 //React iconst knowledge
 import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
 import { FaCss3Alt, FaFontAwesomeFlag } from "react-icons/fa";
@@ -31,10 +32,16 @@ function About() {
       <Title number="01." title="About Me" />
       <div className="border-b border-slate-300 pb-10">
         <div className="flex flex-wrap md:px-36 px-8 text-center md:text-left leading-8">
-          <div className="">
-            {aboutMeText.split("\n").map((text, index) => (
-              <p key={index}>{text}</p>
-            ))}
+          <div className="flex justify-between">
+            <div className="">
+              {aboutMeText.split("\n").map((text, index) => (
+                <p key={index}>{text}</p>
+              ))}
+            </div>
+            <img
+              className="z-40 w-[24rem] h-fit rounded-lg "
+              src={AboutPicture}
+            />
           </div>
         </div>
       </div>
