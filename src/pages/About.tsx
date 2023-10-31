@@ -32,16 +32,18 @@ function About() {
       <Title number="01." title="About Me" />
       <div className="border-b border-slate-300 pb-10">
         <div className="flex flex-wrap md:px-36 px-8 text-center md:text-left leading-8">
-          <div className="flex flex-col-reverse items-center md:flex-row md:justify-between md:gap-5">
+          <div className="relative flex flex-col items-center md:flex-row md:justify-evenly gap-5 flex-wrap">
+            <div>
+              <img
+                className="z-40 h-fit rounded-full w-[20rem]"
+                src={AboutPicture}
+              />
+            </div>
             <div className="">
               {aboutMeText.split("\n").map((text, index) => (
                 <p key={index}>{text}</p>
               ))}
             </div>
-            <img
-              className="z-40 w-[24rem] h-fit rounded-lg "
-              src={AboutPicture}
-            />
           </div>
         </div>
       </div>
@@ -244,3 +246,19 @@ I am a great team player and believe in the group, the process and the goals but
 Working with a team means there will be varying opinions and ideas.\n
 Even if you think your idea is best, you should listen to all ideas before pushing yours. Search for compromises, and remain respectful if your work is criticized.\n
 I am not afraid of mistakes, I take responsibility for my mistakes and look for solutions. I always try to learn from my errors.`;
+
+/*
+
+ <div className="flex flex-col-reverse items-center md:flex-row md:justify-between md:gap-5">
+            <div className="">
+              {aboutMeText.split("\n").map((text, index) => (
+                <p key={index}>{text}</p>
+              ))}
+            </div>
+            <img
+              className="z-40 w-[24rem] h-fit rounded-lg "
+              src={AboutPicture}
+            />
+          </div>
+
+*/
