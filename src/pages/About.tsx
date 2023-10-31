@@ -32,7 +32,7 @@ function About() {
       <Title number="01." title="About Me" />
       <div className="border-b border-slate-300 pb-10">
         <div className="flex flex-wrap md:px-36 px-8 text-center md:text-left leading-8">
-          <div className="flex justify-between">
+          <div className="flex flex-col-reverse items-center md:flex-row md:justify-between md:gap-5">
             <div className="">
               {aboutMeText.split("\n").map((text, index) => (
                 <p key={index}>{text}</p>
