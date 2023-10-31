@@ -32,17 +32,17 @@ function About() {
       <Title number="01." title="About Me" />
       <div className="border-b border-slate-300 pb-10">
         <div className="flex flex-wrap md:px-36 px-8 text-center md:text-left leading-8">
-          <div className="relative flex flex-col items-center md:flex-row md:justify-evenly gap-5 flex-wrap">
-            <div>
-              <img
-                className="z-40 h-fit rounded-full w-[20rem]"
-                src={AboutPicture}
-              />
-            </div>
+          <div className="flex flex-col-reverse items-center md:flex-row md:justify-between gap-5">
             <div className="">
               {aboutMeText.split("\n").map((text, index) => (
                 <p key={index}>{text}</p>
               ))}
+            </div>
+            <div>
+              <img
+                className="h-[30rem] md:w-[60rem] rounded-md  "
+                src={AboutPicture}
+              />
             </div>
           </div>
         </div>
