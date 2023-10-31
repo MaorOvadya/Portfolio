@@ -137,7 +137,7 @@ const projects = [
       "https://github.com/chicacode/teddies-vs-monsters-frontend",
 
     LandingPageTitle: `Life Airline`,
-    LandingPageText: `"Life Airline is a Static responsive website contaion only structure and Css.`,
+    LandingPageText: `"Life Airline is a Static responsive website contain only structure and Css.`,
     LandingPageStack: `Tech Stack:\n#Html,#Sass`,
     LandingPageLink: "https://main--lifeairline.netlify.app",
     LandingPageGithub: "https://github.com/MaorOvadya/landingPage",
