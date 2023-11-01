@@ -41,7 +41,7 @@ function Projects() {
                     <p className="font-thin">made by group cooperation</p>
                     <button className="bg-slate-400 text-white w-[10rem] h-[2.5rem] rounded-md transition-all duration-500 ease-in hover:bg-white hover:text-amber-300 hover:border hover:border-slate-400">
                       <a
-                        className="pb-10 pt-10"
+                        className="pb-3 pt-3 px-5 "
                         target="_blank"
                         href={pro.TeddiesAndMonsterLink}>
                         See Project
@@ -49,7 +49,7 @@ function Projects() {
                     </button>
                     <button className="bg-slate-400 text-white w-[10rem] h-[2.5rem] rounded-md transition-all duration-500 ease-in hover:bg-white hover:text-amber-300 hover:border hover:border-slate-400">
                       <a
-                        className="pb-10 pt-10"
+                        className="pb-3 pt-3 px-14"
                         target="_blank"
                         href={pro.TeddiesAndMonsterGithub}>
                         Github
@@ -99,7 +99,7 @@ function Projects() {
                   <div className="flex flex-col items-center gap-5 sm:flex-row justify-between w-full ">
                     <button className="bg-slate-400 text-white w-[10rem] h-[2.5rem] rounded-md transition-all duration-500 ease-in hover:bg-white hover:text-blue-300 hover:border hover:border-slate-400">
                       <a
-                        className="pb-10 pt-10"
+                        className="pb-3 pt-3 px-9"
                         target="_blank"
                         href={pro.LandingPageLink}>
                         See Project
@@ -107,7 +107,7 @@ function Projects() {
                     </button>
                     <button className="bg-slate-400 text-white w-[10rem] h-[2.5rem] rounded-md transition-all duration-500 ease-in hover:bg-white hover:text-blue-300 hover:border hover:border-slate-400">
                       <a
-                        className="pb-10 pt-10"
+                        className="pb-3 pt-3 px-14 "
                         target="_blank"
                         href={pro.LandingPageGithub}>
                         Github
