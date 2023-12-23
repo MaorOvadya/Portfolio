@@ -131,7 +131,7 @@ const projects = [
     id: 1,
     TeddiesAndMonsterTitle: `Teddies Vs Monster`,
     TeddiesAndMonsterText: `"E-Commerce Platform For Gaming Board: Teddies vs Monsters Board Game is an engaging and fun board game where players take on the roles of teddy bears defending their realm against menacing monsters.`,
-    TeddiesAndMonsterStack: `Tech Stack:\n#Trello,#Figma,#TypeScript,#Tailwind Css,#NextJs,\n#Zuztand,#strapi,#Strip,#swiper,`,
+    TeddiesAndMonsterStack: `Tech Stack:\n#Trello,#Figma,#TypeScript,#Tailwind Css,#NextJs,\n#Zuztand,#strapi,#Stripe,#swiper,`,
     TeddiesAndMonsterLink: "https://teddies-vs-monsters-frontend.vercel.app/",
     TeddiesAndMonsterGithub:
       "https://github.com/chicacode/teddies-vs-monsters-frontend",

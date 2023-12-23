@@ -4,6 +4,8 @@ import { AiFillGithub, AiFillLinkedin, AiFillFacebook } from "react-icons/ai";
 
 import { gsap } from "gsap";
 
+import Resume from "../assets/resume/Web_Developer_Resume.pdf";
+
 function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -71,11 +73,13 @@ function Navbar() {
               duration={200}>
               Contact
             </Link>
-            <Link
+
+            <a
               className="linksComputer transition-all duration-500 ease-in rounded-md text-red-500  border border-red-500 hover:text-white hover:border-white hover:bg-red-500 mx-[1rem] px-6 py-3"
-              to="resume">
+              target="_blank"
+              href={Resume + "#toolbar=0"}>
               Resume
-            </Link>
+            </a>
           </ul>
         </div>
       </div>

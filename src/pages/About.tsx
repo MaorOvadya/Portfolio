@@ -42,6 +42,7 @@ function About() {
               <img
                 className="h-[30rem] md:w-[60rem] rounded-md  "
                 src={AboutPicture}
+                loading="lazy"
               />
             </div>
           </div>
