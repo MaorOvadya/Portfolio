@@ -4,7 +4,7 @@ import { AiFillGithub, AiFillLinkedin, AiFillFacebook } from "react-icons/ai";
 
 import { gsap } from "gsap";
 
-import Resume from "../assets/resume/Web_Developer_Resume.pdf";
+import Resume from "../assets/resume/Resume.pdf";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
