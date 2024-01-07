@@ -151,9 +151,11 @@ function Navbar() {
                   duration={200}>
                   <span className="text-red-500 text-xs">03.</span>Contact
                 </Link>
-                <li className="linksMobile gap-5 transition-all duration-500 ease-in text-red-500 border-b border-slate-300 hover:border-red-500 mx-[1rem] px-6 py-3 w-[90%]">
-                  <Link to="resume">Resume</Link>
-                </li>
+                <a className="linksMobile gap-5 transition-all duration-500 ease-in text-red-500 border-b border-slate-300 hover:border-red-500 mx-[1rem] px-6 py-3 w-[90%]"
+                target="_blank"
+              href={Resume + "#toolbar=0"}>
+              Resume
+            </a>
               </ul>
 
               <div className="text-red-500 flex gap-5 p-6 text-4xl">
